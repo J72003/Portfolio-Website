@@ -1,0 +1,410 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #fffbfb; /* Light grey background */
+    color: #003e21;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content */
+}
+
+header {
+    background-color: #fff; /* White background for header */
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc; /* Subtle border at the bottom */
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #003e21;
+}
+
+nav {
+    background-color: #fff; /* White background for nav */
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; /* Subtle border at the bottom */
+    width: 100%;
+    z-index: 1000; /* Ensure the nav bar is above other elements */
+    position: relative; /* Position relative to set the stacking context */
+}
+
+.nav-items {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-items li {
+    position: relative;
+    margin: 0 15px; /* Space between nav items */
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #003e21;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-items a:hover {
+    color: #dcbb57;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001; /* Ensure the dropdown is above the carousel */
+    text-align: center; /* Center text */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Adjust the height as needed */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%); /* Darken the image for better text readability */
+}
+
+.hero-text {
+    position: absolute;
+    text-align: center;
+    color: dcbb57;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* for the homepage pictures */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 pictures per row */
+    gap: 5px; /* Smaller gap between images */
+    padding: 10px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 400px; /* Fixed height for uniform size */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+.grid-item:hover img {
+    transform: scale(1.15);
+    transition: transform 0.3s ease;
+}
+
+.grid-item a {
+    display: block;
+    color: transparent;
+}
+
+.grid-item a:focus img,
+.grid-item a:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001; /* Ensure the dropdown is above the carousel */
+    text-align: center; /* Center text */
+}
+
+
+.dropdown-content a {
+    color: #003e21;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Add these sections to your existing CSS */
+
+.carousel {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    width: 80%; /* Slightly wider for a more dramatic look */
+    max-width: 800px; /* Increase maximum width */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure contents are contained within the rounded corners */
+    margin-left: auto;
+    margin-right: auto; /* Center the carousel */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+    margin-bottom: 100px;
+}
+
+.carousel-item img {
+    height: 80vh; /* Increase height for larger images */
+    object-fit: cover; /* Ensure the whole image is visible */
+    transition: transform 0.5s ease; /* Smooth transform transition */
+}
+
+.carousel-item a {
+    display: block;
+    color: transparent;
+}
+
+.carousel-item a:focus img,
+.carousel-item a:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker controls */
+    border-radius: 50%; /* Circular controls */
+    padding: 10px; /* Increase padding for a larger click area */
+}
+
+.carousel-indicators li {
+    background-color: #dcbb57; /* Custom color for indicators */
+}
+
+.carousel-indicators .active {
+    background-color: #ffdd57; /* Custom color for active indicator */
+}
+
+
+/* About page */
+
+.about {
+    background-color: #fff;
+    width: 150%;
+    max-width: 900px;
+    padding: 40px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-image {
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #003e21;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #dcbb57;
+}
+
+
+
+
+
+
+
+/* Contact Page Styles */
+.contact {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #003e21;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #003e21;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.contact input,
+.contact textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dcbb57;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #c9a546;
+}
+
+
+/* Inspo page */
+.inspiration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.inspiration h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 10vw;
+    font-weight: 700;
+    color: #003e21;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    text-transform: uppercase;
+    position: relative;
+    animation: moveText 10s infinite linear;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.fashion-heading {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.fashion-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #003e21;
+    margin-bottom: 20px;
+}
+
+.fashion-heading p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #555;
+}
+
