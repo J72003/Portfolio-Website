@@ -10,94 +10,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
 </head>
 <body>
-    
-    <header>
-        <div class="logo">Jaspal Singh</div>
-    </header>
-    <nav>
-        <ul class="nav-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Inspo.html">Inspo</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Portfolio</a>
-                <ul class="dropdown-content">
-                    <li><a href="fashion.html">Fashion</a></li>
-                    <li><a href="concert.html">Concert</a></li>
-                    <li><a href="portrait.html">Portrait</a></li>
-                    <li><a href="landscape.html">Landscape</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="hero-section" id="hero">
-        <div class="hero-text">
-            <h1 class="hero-title">eXtra4Jay</h1>
+    <div class="video-overlay" id="video-overlay">
+        <video autoplay muted loop id="hero-video">
+            <source src="videos/B&W.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-content">
+            <h1 class="hero-title">Jaspal Singh</h1>
             <p class="hero-description">Look at the world through my lens</p>
         </div>
     </div>
-
-
     
+    <div class="content" id="content">
+        <header>
+            <div class="logo">Hallucinations</div>
+        </header>
+        <nav>
+            <ul class="nav-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Inspo.html">Inspo</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Portfolio<span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="fashion.html">Fashion</a></li>
+                        <li><a href="concert.html">Concert</a></li>
+                        <li><a href="portrait.html">Portrait</a></li>
+                        <li><a href="landscape.html">Landscape</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
 
-    <div class="content-section">
-        <div class="grid-container">
-            <div class="grid-item">
-                <a href="images/Fashion-1.jpg" data-lightbox="gallery"><img src="images/Fashion-1.jpg" alt="Image 1"></a>
-            </div>
-            <div class="grid-item">
-                <a href="images/Landscape-1.jpg" data-lightbox="gallery"><img src="images/Landscape-1.jpg" alt="Image 8"></a>
-            </div>
-            <div class="grid-item">
-                <a href="images/Fashion-5.jpg" data-lightbox="gallery"><img src="images/Fashion-5.jpg" alt="Image 3"></a>
-            </div>
-            <div class="grid-item">
-                <a href="images/Landscape-2.jpg" data-lightbox="gallery"><img src="images/Landscape-2.jpg" alt="Image 6"></a>
-            </div>
-            <div class="grid-item">
-                <a href="images/Faby-2.jpg" data-lightbox="gallery"><img src="images/Faby-2.jpg" alt="Image 4"></a>
-            </div>
-            <div class="grid-item">
-                <a href="images/Portrait-1.jpg" data-lightbox="gallery"><img src="images/Portrait-1.jpg" alt="Image 5"></a>
-            </div>
-            <div class="grid-item">
-                <a href="images/Fashion-2.jpg" data-lightbox="gallery"><img src="images/Fashion-2.jpg" alt="Image 2"></a>
-            </div>
-            <div class="grid-item">
-                <a href="images/Ruben.png" data-lightbox="gallery"><img src="images/Ruben.png" alt="Image 7"></a>
+        <div class="content-section">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <a href="images/Fashion-1.jpg" data-lightbox="gallery"><img src="images/Fashion-1.jpg" alt="Image 1"></a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/Landscape-1.jpg" data-lightbox="gallery"><img src="images/Landscape-1.jpg" alt="Image 8"></a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/Fashion-5.jpg" data-lightbox="gallery"><img src="images/Fashion-5.jpg" alt="Image 3"></a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/Landscape-2.jpg" data-lightbox="gallery"><img src="images/Landscape-2.jpg" alt="Image 6"></a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/Faby-2.jpg" data-lightbox="gallery"><img src="images/Faby-2.jpg" alt="Image 4"></a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/Portrait-1.jpg" data-lightbox="gallery"><img src="images/Portrait-1.jpg" alt="Image 5"></a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/Fashion-2.jpg" data-lightbox="gallery"><img src="images/Fashion-2.jpg" alt="Image 2"></a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/Ruben.png" data-lightbox="gallery"><img src="images/Ruben.png" alt="Image 7"></a>
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('scroll', function() {
-            const heroSection = document.getElementById('hero');
-            const scrollPosition = window.scrollY;
-    
-            if (scrollPosition > window.innerHeight / 2) {
-                heroSection.style.opacity = '0';
-                heroSection.style.transform = 'translateY(-50px)';
-            } else {
-                heroSection.style.opacity = '1';
-                heroSection.style.transform = 'translateY(0)';
-            }
-        });
-    
-        document.addEventListener('DOMContentLoaded', function() {
-            lightbox.option({
-                'resizeDuration': 200,
-                'wrapAround': true
-            });
-    
-            setTimeout(function() {
-                document.getElementById('hero-overlay').classList.add('fade-out');
-            }, 3000); // Adjust the timeout duration as needed
-        });
-        </script>
+    <script src="script.js"></script>
 </body>
 </html>
