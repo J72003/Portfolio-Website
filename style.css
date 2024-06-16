@@ -76,31 +76,54 @@ nav {
 
 .hero-section {
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 50vh; /* Adjust this value to make the hero section shorter */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff; /* White background for hero section */
+    background: linear-gradient(#fffbfb);
+    background-size: cover;
+    margin-top: 160px; /* Adjust this value based on the combined height of your header and navbar */
+    margin-bottom: 20px; /* Reduced margin below the hero section */
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .hero-text {
     text-align: center;
     color: #003e21;
-    padding: 20px; /* Adjust this value as needed */
+    padding: 20px; /* Adjusted padding */
+    animation: fadeInUp 1s ease-out; /* Apply animation */
 }
 
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: 4em;
-    margin-bottom: 20px;
+    font-size: 4em; /* Larger font size */
+    font-weight: 700; /* Bold weight */
+    margin-bottom: 10px; /* Reduced margin below the title */
+    letter-spacing: 0.05em; /* Slight letter spacing */
+    text-transform: uppercase; /* Uppercase text */
+    animation: fadeInUp 1.5s ease-out; /* Apply animation with delay */
 }
 
 .hero-description {
-    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em; /* Larger font size */
+    font-weight: 400; /* Regular weight */
     max-width: 600px;
     margin: 0 auto;
+    animation: fadeInUp 2s ease-out; /* Apply animation with delay */
 }
 
 .scroll-down {

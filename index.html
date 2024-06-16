@@ -13,6 +13,7 @@
 
 </head>
 <body>
+    
     <header>
         <div class="logo">Jaspal Singh</div>
     </header>
@@ -36,7 +37,7 @@
 
     <div class="hero-section" id="hero">
         <div class="hero-text">
-            <h1 class="hero-title">Jaspal Singh</h1>
+            <h1 class="hero-title">eXtra4Jay</h1>
             <p class="hero-description">Look at the world through my lens</p>
         </div>
     </div>
@@ -73,6 +74,30 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('scroll', function() {
+            const heroSection = document.getElementById('hero');
+            const scrollPosition = window.scrollY;
+    
+            if (scrollPosition > window.innerHeight / 2) {
+                heroSection.style.opacity = '0';
+                heroSection.style.transform = 'translateY(-50px)';
+            } else {
+                heroSection.style.opacity = '1';
+                heroSection.style.transform = 'translateY(0)';
+            }
+        });
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true
+            });
+    
+            setTimeout(function() {
+                document.getElementById('hero-overlay').classList.add('fade-out');
+            }, 3000); // Adjust the timeout duration as needed
+        });
+        </script>
 </body>
 </html>
