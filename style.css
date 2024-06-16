@@ -69,7 +69,7 @@ nav {
     padding: 10px 0;
     border-bottom: 1px solid #ccc; /* Subtle border at the bottom */
     width: 100%;
-    z-index: 1000; /* Ensure the nav bar is above other elements */
+    z-index: 1000; /* the nav bar is above other elements */
     position: relative; /* Position relative to set the stacking context */
 }
 
@@ -120,10 +120,10 @@ nav {
     background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1001; /* Ensure the dropdown is above the carousel */
+    z-index: 1001; /* the dropdown is above the carousel */
     text-align: center; /* Center text */
     border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensure contents are contained within the rounded corners */
+    overflow: hidden; /* contents are contained within the rounded corners */
 }
 
 .dropdown-content li {
@@ -151,13 +151,13 @@ nav {
 
 .hero-section {
     position: relative;
-    width: 100%; /* Ensure the hero section takes full width */
-    height: 100vh; /* Ensure the hero section takes full height of the viewport */
+    width: 100%; /*  the hero section takes full width */
+    height: 100vh; /*  the hero section takes full height of the viewport */
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(#fffbfb); /* Your background color or gradient */
-    margin: 0; /* Remove margins to ensure full height */
+    margin: 0; /* Remove margins to full height */
 }
 
 @keyframes fadeInUp {
@@ -234,7 +234,7 @@ nav {
 .grid-item img {
     width: 100%;
     height: 400px; /* Fixed height for uniform size */
-    object-fit: cover; /* Ensure the image covers the container */
+    object-fit: cover; /*image covers the container */
 }
 
 .grid-item:hover img {
@@ -262,7 +262,7 @@ nav {
     background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1001; /* Ensure the dropdown is above the carousel */
+    z-index: 1001; /* dropdown is above the carousel */
     text-align: center; /* Center text */
 }
 
@@ -345,7 +345,7 @@ nav {
     width: 80%; /* Slightly wider for a more dramatic look */
     max-width: 800px; /* Increase maximum width */
     border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensure contents are contained within the rounded corners */
+    overflow: hidden; /* contents are contained within the rounded corners */
     margin-left: auto;
     margin-right: auto; /* Center the carousel */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
@@ -354,7 +354,7 @@ nav {
 
 .carousel-item img {
     height: 80vh; /* Increase height for larger images */
-    object-fit: cover; /* Ensure the whole image is visible */
+    object-fit: cover; /*  the whole image is visible */
     transition: transform 0.5s ease; /* Smooth transform transition */
 }
 
