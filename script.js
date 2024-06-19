@@ -1,4 +1,3 @@
-// script.js
 
 document.addEventListener('DOMContentLoaded', function() {
     const videoOverlay = document.getElementById('video-overlay');
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             videoOverlay.style.display = 'none';
             content.classList.add('visible');
         }, { once: true });
-    }, 3000); // Adjust the timeout duration  video length
+    }, 3000); //  timeout in seconds
 });
 
 
