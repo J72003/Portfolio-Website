@@ -603,3 +603,45 @@ nav {
     color: #555;
 }
 
+/* Media Queries for Mobile Responsiveness */
+
+@media (max-width: 768px) {
+    .nav-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-items li {
+        margin: 10px 0;
+    }
+
+    .hero-title {
+        font-size: 2.5em;
+    }
+
+    .hero-description {
+        font-size: 1.2em;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-item img {
+        height: auto; /* Allow images to adapt to content */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .hero-description {
+        font-size: 1em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
