@@ -12,3 +12,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }, { once: true });
     }, 3000); // Adjust the timeout duration  video length
 });
+
+
